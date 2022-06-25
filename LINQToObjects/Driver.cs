@@ -8,10 +8,10 @@
         public string RegistrationAddress { get; }
         public Driver(string driverID, string fullName, DateTime birthDate, string registrationAddress)
         {
-            this.DriverID = driverID;
-            this.FullName = fullName;
-            this.BirthDate = birthDate;
-            this.RegistrationAddress = registrationAddress;
+            DriverID = driverID;
+            FullName = fullName;
+            BirthDate = birthDate;
+            RegistrationAddress = registrationAddress;
         }
     }
 }

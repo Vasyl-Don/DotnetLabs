@@ -74,7 +74,7 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Body style of vehicles");
             var q1 = from x in vehicles
-                     select x.bodyStyle;
+                     select x.BodyStyle;
             Print(q1);
 
             // Join with inserted query
@@ -82,10 +82,10 @@ namespace LINQToObjects
             Console.WriteLine("How many drivers can drive certain vehicles");
             var q2 = from x in
                          from y in vehicleDrivers
-                         group y by y.vehicleVinCode into grp
+                         group y by y.VehicleVinCode into grp
                          select new { vehicleVinCode = grp.Key, driversCount = grp.Count() }
-                     join f in vehicles on x.vehicleVinCode equals f.vinCode
-                     select new { f.mark, f.model, f.releaseYear, x.driversCount };
+                     join f in vehicles on x.vehicleVinCode equals f.VinCode
+                     select new { f.Mark, f.Model, f.ReleaseYear, x.driversCount };
             Print(q2);
 
             // Order by
@@ -100,7 +100,7 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Vehicles grouped by mark");
             var q4 = from x in vehicles
-                     group x.model by x.mark;
+                     group x.Model by x.Mark;
             foreach (var g in q4)
             {
                 Console.WriteLine($"Vehicles made by {g.Key}");
@@ -112,8 +112,8 @@ namespace LINQToObjects
             Console.WriteLine("Drivers, who can drive certain vehicles");
             var q5 = from x in drivers
                      from y in vehicleDrivers
-                     where x.DriverID == y.driverID
-                     group new { y.vehicleVinCode, x.FullName } by y.vehicleVinCode;
+                     where x.DriverID == y.DriverID
+                     group new { y.VehicleVinCode, x.FullName } by y.VehicleVinCode;
             foreach (var g in q5)
                 Print(g);
 
@@ -121,7 +121,7 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("All vehicles made by Dodge");
             var q6 = from x in vehicles
-                     where x.mark == "Dodge"
+                     where x.Mark == "Dodge"
                      select x;
             Print(q6);
 
@@ -129,8 +129,8 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Registration of vehicles");
             var q7 = from x in vehiclesRegistration
-                     join y in drivers on x.ownerID equals y.DriverID
-                     group new { x.vehicleVinCode, x.numericSign, y.FullName } by x.vehicleVinCode;
+                     join y in drivers on x.OwnerID equals y.DriverID
+                     group new { x.VehicleVinCode, x.NumericSign, y.FullName } by x.VehicleVinCode;
             foreach (var g in q7)
                 Print(g);
 
@@ -138,7 +138,7 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("How many times are vehicles registered");
             var q8 = from x in vehiclesRegistration
-                     group x by x.vehicleVinCode into grp
+                     group x by x.VehicleVinCode into grp
                      select new { vehicleVinCode = grp.Key, registrationCount = grp.Count() };
             Print(q8);
 
@@ -146,7 +146,7 @@ namespace LINQToObjects
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Age of vehicles");
             var q9 = from x in vehicles
-                     select new { x.mark, x.model, age = DateTime.Now.Year - x.releaseYear };
+                     select new { x.Mark, x.Model, age = DateTime.Now.Year - x.ReleaseYear };
             Print(q9);
 
             // List ordered by age
@@ -159,12 +159,12 @@ namespace LINQToObjects
 
 
             var query0 = from x in vehicles
-                      join y in vehiclesRegistration on x.vinCode equals y.vehicleVinCode into g
+                      join y in vehiclesRegistration on x.VinCode equals y.VehicleVinCode into g
                       from y in g.DefaultIfEmpty()
                       select new
                       {
-                          vehicleVinCode = x.vinCode,
-                          ownerID = y == null ? "no owner" : y.ownerID
+                          vehicleVinCode = x.VinCode,
+                          ownerID = y == null ? "no owner" : y.OwnerID
                       };
             Print(query0);
 
@@ -181,12 +181,12 @@ namespace LINQToObjects
 
             var query2 = from q in
                              from x in vehicles
-                             join y in vehiclesRegistration on x.vinCode equals y.vehicleVinCode into g
+                             join y in vehiclesRegistration on x.VinCode equals y.VehicleVinCode into g
                              from y in g.DefaultIfEmpty()
                              select new
                              {
-                                 vehicleVinCode = x.vinCode,
-                                 ownerID = y == null ? "no owner" : y.ownerID
+                                 vehicleVinCode = x.VinCode,
+                                 ownerID = y == null ? "no owner" : y.OwnerID
                              }
                          join d in drivers on q.ownerID equals d.DriverID into g
                          from d in g.DefaultIfEmpty()

@@ -2,12 +2,12 @@
 {
     class VehicleDriver
     {
-        public string vehicleVinCode { get; }
-        public string driverID { get; }
+        public string VehicleVinCode { get; }
+        public string DriverID { get; }
         public VehicleDriver(string vehicleVinCode, string driverID)
         {
-            this.driverID = driverID;
-            this.vehicleVinCode = vehicleVinCode;
+            VehicleVinCode = vehicleVinCode;
+            DriverID = driverID;
         }
     }
 }

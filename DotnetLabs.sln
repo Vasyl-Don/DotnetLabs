@@ -3,14 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQToObjects", "LINQToObjects\LINQToObjects.csproj", "{FB9CFFC5-2463-49AB-938C-EAC398C808E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQToObjects", "LINQToObjects\LINQToObjects.csproj", "{FB9CFFC5-2463-49AB-938C-EAC398C808E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQToXML", "LINQToXML\LINQToXML.csproj", "{50733AD5-590B-4DA2-BA0E-362A9DB46BB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQToXML", "LINQToXML\LINQToXML.csproj", "{50733AD5-590B-4DA2-BA0E-362A9DB46BB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1DD19472-56C2-4503-88F7-38D63402DF05}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreationalPatterns", "CreationalPatterns\CreationalPatterns.csproj", "{7972BE68-2E49-4D10-B3FE-354BA75380CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructurePatterns", "StructurePatterns\StructurePatterns.csproj", "{FD9E1D23-17CF-4A6C-AF8A-A4C3B187144D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourPatterns", "BehaviourPatterns\BehaviourPatterns.csproj", "{6F9D7535-790B-459B-8B1C-2FA7AE0543FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +32,18 @@ Global
 		{50733AD5-590B-4DA2-BA0E-362A9DB46BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50733AD5-590B-4DA2-BA0E-362A9DB46BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50733AD5-590B-4DA2-BA0E-362A9DB46BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7972BE68-2E49-4D10-B3FE-354BA75380CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7972BE68-2E49-4D10-B3FE-354BA75380CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7972BE68-2E49-4D10-B3FE-354BA75380CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7972BE68-2E49-4D10-B3FE-354BA75380CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9E1D23-17CF-4A6C-AF8A-A4C3B187144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9E1D23-17CF-4A6C-AF8A-A4C3B187144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9E1D23-17CF-4A6C-AF8A-A4C3B187144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9E1D23-17CF-4A6C-AF8A-A4C3B187144D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9D7535-790B-459B-8B1C-2FA7AE0543FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9D7535-790B-459B-8B1C-2FA7AE0543FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9D7535-790B-459B-8B1C-2FA7AE0543FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9D7535-790B-459B-8B1C-2FA7AE0543FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

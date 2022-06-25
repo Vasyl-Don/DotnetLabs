@@ -80,14 +80,14 @@ namespace LINQToXML
                 foreach (var v in vehicles)
                 {
                     writer.WriteStartElement("vehicle");
-                    writer.WriteElementString("mark", v.mark);
-                    writer.WriteElementString("producer", v.producer);
-                    writer.WriteElementString("model", v.model);
-                    writer.WriteElementString("bodyStyle", v.bodyStyle);
-                    writer.WriteElementString("releaseYear", v.releaseYear.ToString());
-                    writer.WriteElementString("vinCode", v.vinCode);
-                    writer.WriteElementString("color", v.color);
-                    writer.WriteElementString("technicalCondition", v.technicalCondition);
+                    writer.WriteElementString("mark", v.Mark);
+                    writer.WriteElementString("producer", v.Producer);
+                    writer.WriteElementString("model", v.Model);
+                    writer.WriteElementString("bodyStyle", v.BodyStyle);
+                    writer.WriteElementString("releaseYear", v.ReleaseYear.ToString());
+                    writer.WriteElementString("vinCode", v.VinCode);
+                    writer.WriteElementString("color", v.Color);
+                    writer.WriteElementString("technicalCondition", v.TechnicalCondition);
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
@@ -99,10 +99,10 @@ namespace LINQToXML
                 foreach (var d in drivers)
                 {
                     writer1.WriteStartElement("driver");
-                    writer1.WriteElementString("driverID", d.driverID);
-                    writer1.WriteElementString("fullName", d.fullName);
-                    writer1.WriteElementString("birthDate", d.birthDate.ToString());
-                    writer1.WriteElementString("registrationAddress", d.registrationAddress);
+                    writer1.WriteElementString("driverID", d.DriverID);
+                    writer1.WriteElementString("fullName", d.FullName);
+                    writer1.WriteElementString("birthDate", d.BirthDate.ToString());
+                    writer1.WriteElementString("registrationAddress", d.RegistrationAddress);
                     writer1.WriteEndElement();
                 }
                 writer1.WriteEndElement();
@@ -114,8 +114,8 @@ namespace LINQToXML
                 foreach (var vd in vehicleDrivers)
                 {
                     writer2.WriteStartElement("vehicleDriver");
-                    writer2.WriteElementString("vehicleVinCode", vd.vehicleVinCode);
-                    writer2.WriteElementString("driverID", vd.driverID);
+                    writer2.WriteElementString("vehicleVinCode", vd.VehicleVinCode);
+                    writer2.WriteElementString("driverID", vd.DriverID);
                     writer2.WriteEndElement();
                 }
                 writer2.WriteEndElement();
@@ -127,9 +127,9 @@ namespace LINQToXML
                 foreach (var vr in vehiclesRegistration)
                 {
                     writer3.WriteStartElement("vehicleRegistration");
-                    writer3.WriteElementString("vehicleVinCode", vr.vehicleVinCode);
-                    writer3.WriteElementString("ownerID", vr.ownerID);
-                    writer3.WriteElementString("numericSign", vr.numericSign);
+                    writer3.WriteElementString("vehicleVinCode", vr.VehicleVinCode);
+                    writer3.WriteElementString("ownerID", vr.OwnerID);
+                    writer3.WriteElementString("numericSign", vr.NumericSign);
                     writer3.WriteEndElement();
                 }
                 writer3.WriteEndElement();

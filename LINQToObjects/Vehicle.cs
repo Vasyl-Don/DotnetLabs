@@ -2,25 +2,25 @@
 {
     public class Vehicle
     {
-        public string mark { get; }
-        public string producer { get; }
-        public string model { get; }
-        public string bodyStyle { get; }
-        public int releaseYear { get; }
-        public string vinCode { get; }
-        public string color { get; }
-        public string technicalCondition { get; }
+        public string Mark { get; }
+        public string Producer { get; }
+        public string Model { get; }
+        public string BodyStyle { get; }
+        public int ReleaseYear { get; }
+        public string VinCode { get; }
+        public string Color { get; }
+        public string TechnicalCondition { get; }
 
         public Vehicle(string mark, string producer, string model, string bodyStyle, int releaseYear, string vinCode, string color, string technicalCondition)
         {
-            this.mark = mark;
-            this.producer = producer;
-            this.model = model;
-            this.bodyStyle = bodyStyle;
-            this.releaseYear = releaseYear;
-            this.vinCode = vinCode;
-            this.color = color;
-            this.technicalCondition = technicalCondition;
+            Mark = mark;
+            Producer = producer;
+            Model = model;
+            BodyStyle = bodyStyle;
+            ReleaseYear = releaseYear;
+            VinCode = vinCode;
+            Color = color;
+            TechnicalCondition = technicalCondition;
         }
     }
 }

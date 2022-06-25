@@ -2,14 +2,14 @@
 {
     class VehicleRegistration
     {
-        public string vehicleVinCode { get; }
-        public string ownerID { get; }
-        public string numericSign { get; }
+        public string VehicleVinCode { get; }
+        public string OwnerID { get; }
+        public string NumericSign { get; }
         public VehicleRegistration(string vinCode, string ownerID, string numericSign)
         {
-            this.vehicleVinCode = vinCode;
-            this.ownerID = ownerID;
-            this.numericSign = numericSign;
+            VehicleVinCode = vinCode;
+            OwnerID = ownerID;
+            NumericSign = numericSign;
         }
     }
 }
